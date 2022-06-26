@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm Emli anime-theme management bot [✨](https://te.legra.ph/file/074ef8d210745e3380baf.jpg)
+✪ I'm Natasha group management bot [✨](https://te.legra.ph/file/074ef8d210745e3380baf.jpg)
 ────────────────────────
 × *Bot Uptime:* `{}`
 × `{}` *users, across* `{}` *chats*
@@ -92,7 +92,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="About Emli Robot", callback_data="emli_"),
+        InlineKeyboardButton(text="About natasha", callback_data="emli_"),
     ],
     [
         InlineKeyboardButton(text="Help", callback_data="help_back"),
@@ -102,7 +102,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="➗ Add Emli To Your Group ➗", url="t.me/EMLIXbot?startgroup=new"),
+            text="➗ Add natasha To Your Group ➗", url="t.me/missnatashabot?startgroup=new"),
     ],
 ]
 
@@ -229,7 +229,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>Hi👋 I'm Emli robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
+            f"<b>Hi👋 I'm Natasha!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML
        )
 
@@ -360,35 +360,18 @@ def emli_about_callback(update, context):
     query = update.callback_query
     if query.data == "emli_":
         query.message.edit_text(
-            text="๏ I'm *Emli*, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm *Natsha*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
             "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Emli's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for Emli.",
+            "\n\nnatasha's licensed under the GNU General Public License v3.0_"
+            "\n\n Click on button bellow to get basic help for natsha.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Admins", callback_data="emli_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="emli_notes"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Support", callback_data="emli_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="emli_credit"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="About dev", callback_data="source_"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="emli_back"),
-                 ]
-                ]
-            ),
+            
         )
     elif query.data == "emli_back":
         first_name = update.effective_user.first_name
@@ -408,7 +391,7 @@ def emli_about_callback(update, context):
     elif query.data == "emli_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Emli now ready to manage your group."
+            "\nCongragulations, natasha now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -435,33 +418,22 @@ def emli_about_callback(update, context):
         )
     elif query.data == "emli_support":
         query.message.edit_text(
-            text="*๏ Emli support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Emli.",
+            text="*๏ natasha support chats*"
+            "\nJoin My Support Group/Channel for see or report a problem on natasha.",
             parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Support", url="t.me/OMG_info"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/nexleech"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="emli_"),
-                 
-                 ]
-                ]
-            ),
+            
         )
 
 
     elif query.data == "emli_credit":
         query.message.edit_text(
-            text=f"<b>๏ Credis for Emli</b>\n"
-            f"\nHere Developers Making The Emli",
+            text=f"<b>๏ Credis for natasha</b>\n"
+            f"\nHere Developers Making The natsha",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="LUSIFER", url="https://mobile.twitter.com/Lusifer_noob"),
+                    InlineKeyboardButton(text="pyrogrammers", url="https://t.me/pyrogrammers"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emli_"),
@@ -477,33 +449,7 @@ def Source_about_callback(update, context):
         query.message.edit_text(
             text="๏›› About dev.",
             parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="LUSIFER", url="https://t.me/shado_hackers"),
-                    InlineKeyboardButton(text="𝚂𝚞𝚙𝚙𝚘𝚛𝚝", url="https://t.me/OMG_info"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="𝙻𝚎𝚎𝚌𝚑", url="https://t.me/nexleech"),
-                    InlineKeyboardButton(text="𝙾𝚝𝚑𝚎𝚛 𝚋𝚘𝚝", url="https://t.me/OMG_info/3990"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂 V2", url="https://t.me/EMLIXbot"),
-                    InlineKeyboardButton(text="Source", url="tg://need_update_for_some_feature"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁", url="https://heroku.com/"),
-                    InlineKeyboardButton(text="𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴", url="https://cloud.mongodb.com/"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Follow meh", url="https://mobile.twitter.com/Shado_hackers"),
-                    InlineKeyboardButton(text="𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴", url="https://www.python.org/"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="emli_"),
-                 ]
-                ]
-            ),
+            
         )
     elif query.data == "source_back":
         first_name = update.effective_user.first_name
@@ -791,7 +737,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                f"""**Emli Robot Started!**
+                f"""**natasha Started!**
 
 **Python:** `{memek()}`
 **Telegram Library:** `v{peler}`""",
