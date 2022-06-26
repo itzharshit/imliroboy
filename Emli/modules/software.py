@@ -14,7 +14,6 @@ from yaml import load, Loader
 
 from Emli import dispatcher
 from Emli.modules.sql.clear_cmd_sql import get_clearcmd
-from Emli.modules.github import getphh
 from Emli.modules.helper_funcs.misc import delete
 
 
