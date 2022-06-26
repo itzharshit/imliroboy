@@ -91,15 +91,7 @@ PM_START_TEXT = """
 """
 
 buttons = [
-    [
-        InlineKeyboardButton(text="About natasha", callback_data="emli_"),
-    ],
-    [
-        InlineKeyboardButton(text="Help", callback_data="help_back"),
-        InlineKeyboardButton(
-            text="support!​​", url="t.me/OMG_info"
-        ),
-    ],
+    
     [
         InlineKeyboardButton(
             text="➗ Add natasha To Your Group ➗", url="t.me/missnatashabot?startgroup=new"),
@@ -113,7 +105,7 @@ Click on the button bellow to get description about specifics command."""
 EMI_IMG = "https://te.legra.ph/file/074ef8d210745e3380baf.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @shado_hackers \
+ You can support the project by contacting @pyrogrammers \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
